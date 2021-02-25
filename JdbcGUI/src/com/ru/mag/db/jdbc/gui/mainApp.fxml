@@ -3,28 +3,42 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.text.Font?>
 <GridPane alignment="center" hgap="10" prefHeight="300.0" prefWidth="300.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ru.mag.db.jdbc.gui.MainController">
    <rowConstraints>
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
    </rowConstraints>
    <children>
-      <Button mnemonicParsing="false" onAction="#showPureTable" text="Show Drivers" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-      <Button mnemonicParsing="false" onAction="#showPureTable" text="Show Clients" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+       <Label alignment="CENTER" GridPane.columnSpan="3" GridPane.rowIndex="0" contentDisplay="CENTER" prefWidth="500.0" text="Taxi Company" textAlignment="JUSTIFY" >
+           <font>
+               <Font name="System Bold" size="18.0" />
+           </font>
+       </Label>
 
-      <Button mnemonicParsing="false" onAction="#showPureTable" text="Show Requests" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-      <Button mnemonicParsing="false" onAction="#showPureTable" text="Show Pickups" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Button mnemonicParsing="false" onAction="#showPureTable" text="Show Drivers" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" maxWidth="Infinity" />
+      <Button mnemonicParsing="false" onAction="#showPureTable" text="Show Clients" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" maxWidth="Infinity"/>
 
-       <Button mnemonicParsing="false" onAction="#showPureTable" text="Show Pickups" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-       <Button mnemonicParsing="false" onAction="#showPureTable" text="Show Dropoffs" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <Button mnemonicParsing="false" onAction="#showPureTable" text="Show Requests" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" maxWidth="Infinity"/>
+      <Button mnemonicParsing="false" onAction="#showPureTable" text="Show Ratess" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" maxWidth="Infinity"/>
 
-       <TextField fx:id="driverClientId" promptText="Enter course..." GridPane.rowIndex="4" />
+       <Button mnemonicParsing="false" onAction="#showPureTable" text="Show Pickups" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" maxWidth="Infinity"/>
+       <Button mnemonicParsing="false" onAction="#showPureTable" text="Show Dropoffs" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" maxWidth="Infinity"/>
 
-       <Button mnemonicParsing="false" onAction="#showRatingById" text="Drivers Rating" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-       <Button mnemonicParsing="false" onAction="#showRatingById" text="Clients Rating" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+       <Label alignment="CENTER" GridPane.columnSpan="3" GridPane.rowIndex="4" contentDisplay="CENTER" prefWidth="500.0" text="Rating by ID" textAlignment="JUSTIFY" >
+           <font>
+               <Font name="System Bold" size="12.0" />
+           </font>
+       </Label>
+
+       <TextField fx:id="driverClientId" promptText="Enter ID..." GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5" maxWidth="280" />
+
+       <Button mnemonicParsing="false" onAction="#showRatingById" text="Drivers Rating" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" maxWidth="Infinity"/>
+       <Button mnemonicParsing="false" onAction="#showRatingById" text="Clients Rating" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" maxWidth="Infinity"/>
+
+<!--       <Label GridPane.columnIndex="6"></Label>-->
    </children>
    <columnConstraints>
-      <ColumnConstraints fillWidth="true" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" percentWidth="0" prefWidth="100.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
    </columnConstraints>
 </GridPane>
